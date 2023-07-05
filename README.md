@@ -4,10 +4,11 @@
 - [What Is TCP/IP?](https://github.com/Mushigarou/NetPractice#what-is-tcpip)
 - [Terminology]()
 - [What TCP/IP Can be Used For?]()
-- [TCP/IP Layers]()
+- [TCP/IP Model]()
+- [IPv4 Subnetting]()
 
 ## What Is TCP/IP?
-The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
+:star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
 
 ## Terminology
 - **Datagrams:** A packet of data passed across a network
@@ -19,7 +20,7 @@ The Transmission Control Protocol/Internet Protocol is a set of protocols (commu
   - **Local host:** the computer at which the user is working
   - **Foreign host:** any other hostname on the network
 - **Network:** A network is a collection of interconnected devices, systems, or components that can communicate and exchange data with each other (WAN, LAN...)
-  - **Physical network:** the hardware that makes up the network (cables, servers, routers, switches...). The physical network must support and the implementation of the logical network for proper functioning
+  - **Physical network:** the hardware that makes up the network (cables, servers, routers, switches...). The physical network must support the implementation of the logical network for proper functioning
   - **Logical network:** is the virtual design, functional aspect of the network based on the organization's needs, in other words, it's the blueprint for implementing the physical network infrastructure (how systems are interconnected, routing protocols, IP addressing, logical network segmentation...)
 - **Packet:** a block of data used by the process to receive and send data in one transaction between the host and its network
 - **Port:** A logical endpoint that allows network protocols and services to communicate (send and receive data)
@@ -52,6 +53,23 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - Connectionless Protocol (UDP, HTTP, ICMP, IP...) :
   - A message is sent from one endpoint to another without a prior arrangement
   - Used for broadcast
+
+## IPv4 Subnetting 
+[**Video series by Practical Networking on Youtube**](https://subnetipv4.com/)
+
+### What Is Subnetting?
+
+:star: **Subnetting means dividing a network into sub-networks.**
+
+Subnetting Attributes :
+- **Network ID:** The first IP address in the sub-network
+- **Broadcast IP:** The last IP address in the sub-network
+- **First host:** The first IP address after the sub-network ID
+- **Last host:** The first IP address before the broadcast IP
+- **Next Network:** The first IP address after the broadcast IP
+- **# IP addresses:** Number of all available IP addresses in a sub-network
+- **CIDR/Subnet:** Converting between CIDR/Subnet Mask
+
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
