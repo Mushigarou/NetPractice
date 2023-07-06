@@ -6,6 +6,7 @@
 - [What TCP/IP Can be Used For?]()
 - [TCP/IP Model]()
 - [IPv4 Subnetting]()
+- [How To Write A CheatSheet?]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -34,12 +35,12 @@
 
 ## TCP/IP Model
 
-Layers                  | Short Explanation       | Protocols Examples  |
+Layers                  | Short Explanation       | Protocols           |
 ------------------------|-------------------------|---------------------|
 Application layer       | Applications or processes create user data and communicate it on another or the same host (Make use of the Transport layer)                                            | SMTP, SSH, FTP, HTTPS, HTTP, DHCP...|
-Transport layer         | Provides a channel for host-to-host communication on the same network or remote network separated by routers                                                              | TCP (connection-oriented), UDP (connectionless), SCTP (connection-oriented)...|
-Internet layer          | Provides unreliable datagram transmission between hosts, and the IP (Primary Protocol) establishes the basis for internetworking. its function in routing is to transport datagrams to the next closer host (IP router) to the final destination.                                                                                                | IP(IPv4, IPv6), ICMP, IGMP...|
-Link + Physical layer   | Defines the networking methods (protocols) within the scope of the local network link on which hosts communicate without intervening routers                       | Mac Address, Fiber, Wireless, Ethernet Cables... |
+Transport layer         | Provides a channel for host-to-host communication on the same network or remote network separated by routers                                                                   | TCP (connection-oriented), UDP (connectionless), SCTP (connection-oriented)...|
+Internet layer          | Provides unreliable datagram transmission between hosts, and the IP (Primary Protocol) establishes the basis for internetworking. its function in routing is to transport datagrams to the next closer host (IP router) to the final destination.                                                                         | IP(IPv4, IPv6), ICMP, IGMP...|
+Link + Physical layer   | Defines the networking methods (protocols) within the scope of the local network link on which hosts communicate without intervening routers                                 | Mac Address, Fiber, Wireless, Ethernet Cables... |
 
 - Connection-oriented Protocol (TCP, SCTP...) :
   - requires both devices to be able to communicate with each other
@@ -59,9 +60,12 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 ### What Is Subnetting?
 
-:star: **Subnetting means dividing a network into sub-networks.**
+:star: **Subnetting means dividing a network into sub-networks.** :star:
 
-Subnetting Attributes :
+<img width="708" alt="Subnetting a network of 255 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting.png">
+
+
+➡️ **Subnetting Attributes:**
 - **Network ID:** The first IP address in the sub-network
 - **Broadcast IP:** The last IP address in the sub-network
 - **First host:** The first IP address after the sub-network ID
@@ -69,6 +73,21 @@ Subnetting Attributes :
 - **Next Network:** The first IP address after the broadcast IP
 - **# IP addresses:** Number of all available IP addresses in a sub-network
 - **CIDR/Subnet:** Converting between CIDR/Subnet Mask
+
+## How To Write A CheatSheet?
+1️⃣: Start with 1, double until you reach 128 (right to left)
+
+2️⃣: Subtract the top row from 256
+
+3️⃣: From /32, list CIDR notation  (right to left)
+
+- /24 means 255 IP addresses
+
+| 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
+------|-----|-----|-----|-----|-----|-----|-----|------------------
+| 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
+| /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+
 
 
 ## For More Information:
