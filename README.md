@@ -40,6 +40,10 @@
 - Transfer files
 - Manage Network
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
 ## TCP/IP Model
 
 Layers                  | Short Explanation       | Protocols           |
@@ -62,6 +66,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - A message is sent from one endpoint to another without a prior arrangement
   - Used for broadcast
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
 ## IPv4 Subnetting 
 
 ### What Is Subnetting?
@@ -79,6 +87,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - **Next Network:** The first IP address after the broadcast IP
 - **# IP addresses:** Number of all available IP addresses in a sub-network
 - **CIDR/Subnet:** Converting between CIDR/Subnet Mask
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### How To Write A CheatSheet?
 1️⃣: Start with 1, double until you reach 128 (right to left)
@@ -114,6 +126,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 🎯: Start higher, and subtract
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### Subnetting In /17 - /24 Range
 - **To get the CIDR notation of the 3rd octet**
@@ -139,6 +154,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
 **# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
 **CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### Subnetting In /1 - /16 Range
 
@@ -176,8 +195,6 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
 </div>
-</br>
-
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
