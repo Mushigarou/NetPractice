@@ -6,8 +6,9 @@
 - [What TCP/IP Can be Used For?]()
 - [TCP/IP Model]()
 - [IPv4 Subnetting]()
-- [How To Write A CheatSheet?]()
-- [How To Solve all Subnetting Attributes?]()
+  - [How To Write A CheatSheet?]()
+  - [How To Find Attributes Given An IP?]()
+  - [Tips To Solve 7 Attributes]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -74,7 +75,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - **# IP addresses:** Number of all available IP addresses in a sub-network
 - **CIDR/Subnet:** Converting between CIDR/Subnet Mask
 
-## How To Write A CheatSheet?
+### How To Write A CheatSheet?
 1️⃣: Start with 1, double until you reach 128 (right to left)
 
 2️⃣: Subtract the top row from 256
@@ -88,15 +89,19 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
 
-## How To Solve All Subnetting Attributes?
+### How To Find Attributes Given An IP?
 1️⃣ : Use the given CIDR/Mask and find
   - CIDR/subnet map to each other
   - Groupe size ==> IP Address
   - Start at .0 in the relevant octet
   - Increase by group size until you **PASS** target IP
 
-2️⃣ : get Net ID, Next Network, BC IP, First Host, Last Host, IP addresses (Group Size)
-![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Solving_Subnetting_Problems.png)
+2️⃣ : get Net ID ➡️ Next Network ➡️ BC IP ➡️ First Host ➡️ Last Host ➡️ IP addresses (Group Size)
+
+### Tips To Solve 7 Attributes
+🎯: Group Size can be multiplied to get quickly to the subnet of the targeted IP address
+
+![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting_Attributes.png)
 
 
 ## For More Information:
@@ -104,4 +109,4 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - [IBM](https://www.ibm.com/docs/en/aix/7.2?topic=management-transmission-control-protocolinternet-protocol)
 - [Requirements for Internet Hosts -- Communication Layers -- RFC-1123](https://datatracker.ietf.org/doc/html/rfc1122)
 - [List of IP protocol numbers](https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers)
-- [**Video series by Practical Networking on Youtube**](https://subnetipv4.com/)
+- 📺 [**Video series by Practical Networking on Youtube**](https://subnetipv4.com/)
