@@ -130,12 +130,12 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 |  **Subnetting Attributes** |➡️ **of 10.4.235.99 /21:**            | ➡️ ** of 10.4.211.66 /18:** |
 -----------------------------|--------------------------------------|----------------------------  |
-**Network ID:** |   10.4.232.0 [3rd Octet => .224 => .232 => .240]  | 10.4.192.0 [3rd Octet : .128 => .192 => .0]  |
+**Network ID:** |   10.4.232.0 [3rd Octet => .224 => .232]  | 10.4.192.0 [3rd Octet : .128 => .192 => .0]  |
 **Broadcast IP:**| 10.4.239.255                                      | 10.4.255.255                                   |
 **First host:** |  10.4.232.1                                        |  10.4.192.1                                      |
 **Last host:** |  10.4.239.254                                       |  10.4.255.254                                    |
 **Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
-**# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11 = 2048]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
+**# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
 **CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
 
 ### Subnetting In /1 - /16 Range
@@ -149,22 +149,26 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
-| /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+| /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **4th Octet**   |
 | /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 | **3rd Octet**   |
 | /9 | /10  | /11 | /12 | /13 | /14 | /15 | /16 | **2nd Octet**   |
 | /1 | /2   | /3  | /4  | /5  | /6  | /7  | /8  | **1st Octet**   |
 
+💡: *0.0.0.0 /0 is commonly used in the routing table as the default route or default gateway*
+
 #### Example:
 
-|  **Subnetting Attributes** |➡️ **of 10.50.111.222 /12:**            | ➡️ ** of :** |
------------------------------|--------------------------------------|----------------------------  |
-**Network ID:** |    []      |  []  |
-**Broadcast IP:**|                                      |                                  |
-**First host:** |                                       |                                      |
-**Last host:** |                                       |                                     |
-**Next Network:** |                                      |                                       |
-**# Total IP addresses:** |     []  |          []      |
-**CIDR/Subnet:** |                                      |   |
+|  **Subnetting Attributes** |➡️ **of 10.50.111.222 /12:**   | ➡️ ** of 10.50.111.222 /7:** | ➡️ ** of 213.50.111.222 /2:**    |
+-----------------------------|-------------------------------|----------------------------  |---------------------------------|
+**Network ID:**              | 10.48.0.0 [.48 => .64 ]       | 10.0.0.0 [.8 => .10 => .12]  | 192.0.0.0 [.128 => .192 => .0]  |
+**Broadcast IP:**            | 10.63.255.255                 | 11.255.255.255               | 255.255.255.255                 |
+**First host:**              | 10.48.0.1                     | 10.0.0.1                     | 192.0.0.1                       | 
+**Last host:**               | 10.64.255.254                 | 11.255.255.254               | 255.255.255.254                 |
+**Next Network:**            | 10.64.0.0                     | 12.0.0.0                     | **n/a**                                                                                                                [No leading octet, we're at end of IPv4 addresses]  |
+**# Total IP addresses:**    | 1,048,576    [2 ^ (32-12)]    | 33,554,432  [2^(32-7)]       | 1,073,741,824                   |
+**CIDR/Subnet:**             | 255.240.0.0                   |  254.0.0.0                   | 192.0.0.0                       | 
+
+💡: In reality most of the last /2 addresses are unassignable as host addresses
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
