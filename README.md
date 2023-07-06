@@ -12,6 +12,7 @@
   - [Tips For Solving The 7 Attributes Faster]()
   - [Subnetting In /17 - /24 Range]()
   - [Subnetting In /1 - /16 Range]()
+- [Network Devices]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -170,6 +171,36 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 *💡: **In reality most of the last /2 addresses are unassignable as host addresses***
 ![Entire IPv4 addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png)
+
+## Network Devices
+### How Data Flows Through The Internet
+#### Hosts :
+⭐ *Any system that sends or receives traffic.*
+  - phone
+  - computer
+  - laptop
+  - servers
+  - cloud servers
+  - Internet of Things (IoT) (speaker, refrigerator...)
+
+⭐ **Client:** initiates request. **Servers** respond. (Relative to specific communication)
+
+#### IP Addresses :
+
+⭐ *IP Address is the identity of each host*
+  - IPv4 is 32bit
+  - Hierarchically assigned
+
+![IP addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/ip_addresses.png)
+
+💡 : all of those hosts above exist in a network
+
+#### Network :
+⭐ Network is what **transports traffic between hosts**
+  - Logical grouping of hosts which require similar connectivity
+  - Subnetworks, subnet
+  - 💡 Networks connect to other networks (The Internet is simply an inter-connected network)
+
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
