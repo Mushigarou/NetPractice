@@ -1,17 +1,19 @@
 # NetPractice
 
+<div id="top"></div>
+
 ## Content
 - [What Is TCP/IP?](https://github.com/Mushigarou/NetPractice#what-is-tcpip)
-- [Terminology]()
-- [What TCP/IP Can be Used For?]()
-- [TCP/IP Model]()
-- [IPv4 Subnetting]()
-  - [What is subnetting]() 
-  - [How To Write A CheatSheet?]()
-  - [How To Find The 7 Attributes of a Given IP Address?]()
-  - [Tips For Solving The 7 Attributes Faster]()
-  - [Subnetting In /17 - /24 Range]()
-  - [Subnetting In /1 - /16 Range]()
+- [Terminology](https://github.com/Mushigarou/NetPractice/tree/main#terminology)
+- [What TCP/IP Can be Used For?](https://github.com/Mushigarou/NetPractice/tree/main#what-tcpip-can-be-used-for-non-exhaustive-list)
+- [TCP/IP Model](https://github.com/Mushigarou/NetPractice/tree/main#tcpip-model)
+- [IPv4 Subnetting](https://github.com/Mushigarou/NetPractice/tree/main#ipv4-subnetting)
+  - [What is subnetting](https://github.com/Mushigarou/NetPractice/tree/main#what-is-subnetting) 
+  - [How To Write A CheatSheet?](https://github.com/Mushigarou/NetPractice/tree/main#how-to-write-a-cheatsheet)
+  - [How To Find The 7 Attributes of a Given IP Address?](https://github.com/Mushigarou/NetPractice/tree/main#how-to-find-the-7-attributes-of-a-given-ip-address)
+  - [Tips For Solving The 7 Attributes Faster](https://github.com/Mushigarou/NetPractice/tree/main#tips-for-solving-the-7-attributes-faster)
+  - [Subnetting In /17 - /24 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-17---24-range)
+  - [Subnetting In /1 - /16 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-1---16-range)
 - [Network Devices]()
 
 ## What Is TCP/IP?
@@ -39,6 +41,10 @@
 - Transfer files
 - Manage Network
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
 ## TCP/IP Model
 
 Layers                  | Short Explanation       | Protocols           |
@@ -61,6 +67,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - A message is sent from one endpoint to another without a prior arrangement
   - Used for broadcast
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
 ## IPv4 Subnetting 
 
 ### What Is Subnetting?
@@ -78,6 +88,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - **Next Network:** The first IP address after the broadcast IP
 - **# IP addresses:** Number of all available IP addresses in a sub-network
 - **CIDR/Subnet:** Converting between CIDR/Subnet Mask
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### How To Write A CheatSheet?
 1️⃣: Start with 1, double until you reach 128 (right to left)
@@ -113,6 +127,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 🎯: Start higher, and subtract
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### Subnetting In /17 - /24 Range
 - **To get the CIDR notation of the 3rd octet**
@@ -138,6 +155,10 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
 **# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
 **CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ### Subnetting In /1 - /16 Range
 
@@ -201,6 +222,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - Subnetworks, subnet
   - 💡 Networks connect to other networks (The Internet is simply an inter-connected network)
 
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
