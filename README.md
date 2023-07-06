@@ -2,16 +2,16 @@
 
 ## Content
 - [What Is TCP/IP?](https://github.com/Mushigarou/NetPractice#what-is-tcpip)
-- [Terminology]()
-- [What TCP/IP Can be Used For?]()
-- [TCP/IP Model]()
-- [IPv4 Subnetting]()
-  - [What is subnetting]() 
-  - [How To Write A CheatSheet?]()
-  - [How To Find The 7 Attributes of a Given IP Address?]()
-  - [Tips For Solving The 7 Attributes Faster]()
-  - [Subnetting In /17 - /24 Range]()
-  - [Subnetting In /1 - /16 Range]()
+- [Terminology](https://github.com/Mushigarou/NetPractice/tree/main#terminology)
+- [What TCP/IP Can be Used For?](https://github.com/Mushigarou/NetPractice/tree/main#what-tcpip-can-be-used-for-non-exhaustive-list)
+- [TCP/IP Model](https://github.com/Mushigarou/NetPractice/tree/main#tcpip-model)
+- [IPv4 Subnetting](https://github.com/Mushigarou/NetPractice/tree/main#ipv4-subnetting)
+  - [What is subnetting](https://github.com/Mushigarou/NetPractice/tree/main#ipv4-subnetting) 
+  - [How To Write A CheatSheet?](https://github.com/Mushigarou/NetPractice/tree/main#how-to-write-a-cheatsheet)
+  - [How To Find The 7 Attributes of a Given IP Address?](https://github.com/Mushigarou/NetPractice/tree/main#how-to-find-the-7-attributes-of-a-given-ip-address)
+  - [Tips For Solving The 7 Attributes Faster](https://github.com/Mushigarou/NetPractice/tree/main#tips-for-solving-the-7-attributes-faster)
+  - [Subnetting In /17 - /24 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-17---24-range)
+  - [Subnetting In /1 - /16 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-17---24-range)
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
