@@ -116,9 +116,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 ### Subnetting In /17 - /24 Range
 - **To get the CIDR notation of the 3rd octet**
 
-  💡: Start over from the **right side** and keep **decrementing**
+  *💡: Start over from the **right side** and keep **decrementing***
   
-  💡: **Total of IP Addresses = 2 ^ (32 - CIDR)**
+  *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
@@ -142,9 +142,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 - **To get the CIDR notation of the 3rd octet**
 
-  💡: Start over from the **right side** and keep **decrementing**
+  *💡: Start over from the **right side** and keep **decrementing***
   
-  💡: **Total of IP Addresses = 2 ^ (32 - CIDR)**
+  *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
@@ -168,7 +168,8 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **# Total IP addresses:**    | 1,048,576    [2 ^ (32-12)]    | 33,554,432  [2^(32-7)]       | 1,073,741,824                   |
 **CIDR/Subnet:**             | 255.240.0.0                   |  254.0.0.0                   | 192.0.0.0                       | 
 
-💡: In reality most of the last /2 addresses are unassignable as host addresses
+*💡: **In reality most of the last /2 addresses are unassignable as host addresses***
+![Entire IPv4 addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png)
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
