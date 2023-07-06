@@ -7,6 +7,7 @@
 - [TCP/IP Model]()
 - [IPv4 Subnetting]()
 - [How To Write A CheatSheet?]()
+- [How To Solve all Subnetting Attributes?]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -42,7 +43,7 @@ Transport layer         | Provides a channel for host-to-host communication on t
 Internet layer          | Provides unreliable datagram transmission between hosts, and the IP (Primary Protocol) establishes the basis for internetworking. its function in routing is to transport datagrams to the next closer host (IP router) to the final destination.                                                                         | IP(IPv4, IPv6), ICMP, IGMP...|
 Link + Physical layer   | Defines the networking methods (protocols) within the scope of the local network link on which hosts communicate without intervening routers                                 | Mac Address, Fiber, Wireless, Ethernet Cables... |
 
-- Connection-oriented Protocol (TCP, SCTP...) :
+- ⭐ **Connection-oriented Protocol (TCP, SCTP...):**
   - requires both devices to be able to communicate with each other
   - TCP successfully makes the connection reliable by :
     - data arrives in-order
@@ -51,16 +52,15 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
     - lost or discarded packets are resent
     - includes traffic congestion control
 
-- Connectionless Protocol (UDP, HTTP, ICMP, IP...) :
+- ⭐ **Connectionless Protocol (UDP, HTTP, ICMP, IP...):**
   - A message is sent from one endpoint to another without a prior arrangement
   - Used for broadcast
 
 ## IPv4 Subnetting 
-[**Video series by Practical Networking on Youtube**](https://subnetipv4.com/)
 
 ### What Is Subnetting?
 
-:star: **Subnetting means dividing a network into sub-networks.** :star:
+⭐ **Subnetting means dividing a network into sub-networks.** :star:
 
 <img width="708" alt="Subnetting a network of 255 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting.png">
 
@@ -88,6 +88,15 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
 
+## How To Solve All Subnetting Attributes?
+1️⃣ : Use the given CIDR/Mask and find
+  - CIDR/subnet map to each other
+  - Groupe size ==> IP Address
+  - Start at .0 in the relevant octet
+  - Increase by group size until you **PASS** target IP
+
+2️⃣ : get Net ID, Next Network, BC IP, First Host, Last Host, IP addresses (Group Size)
+![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Solving_Subnetting_Problems.png)
 
 
 ## For More Information:
@@ -95,3 +104,4 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 - [IBM](https://www.ibm.com/docs/en/aix/7.2?topic=management-transmission-control-protocolinternet-protocol)
 - [Requirements for Internet Hosts -- Communication Layers -- RFC-1123](https://datatracker.ietf.org/doc/html/rfc1122)
 - [List of IP protocol numbers](https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers)
+- [**Video series by Practical Networking on Youtube**](https://subnetipv4.com/)
