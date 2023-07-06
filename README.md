@@ -6,9 +6,12 @@
 - [What TCP/IP Can be Used For?]()
 - [TCP/IP Model]()
 - [IPv4 Subnetting]()
+  - [What is subnetting]() 
   - [How To Write A CheatSheet?]()
-  - [How To Find Attributes Given An IP?]()
-  - [Tips To Solve 7 Attributes]()
+  - [How To Find The 7 Attributes of a Given IP Address?]()
+  - [Tips For Solving The 7 Attributes Faster]()
+  - [Subnetting In /17 - /24 Range]()
+  - [Subnetting In /1 - /16 Range]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -82,14 +85,13 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 3️⃣: From /32, list CIDR notation  (right to left)
 
-- /24 means 255 IP addresses
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
 
-### How To Find Attributes Given An IP?
+### How To Find The 7 Attributes of a Given IP Address?
 1️⃣ : Use the given CIDR/Mask and find
   - CIDR/subnet map to each other
   - Groupe size ==> IP Address
@@ -98,10 +100,45 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 2️⃣ : get Net ID ➡️ Next Network ➡️ BC IP ➡️ First Host ➡️ Last Host ➡️ IP addresses (Group Size)
 
-### Tips To Solve 7 Attributes
-🎯: Group Size can be multiplied to get quickly to the subnet of the targeted IP address
+![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting_Attribute.png)
 
-![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting_Attributes.png)
+### Tips For Solving The 7 Attributes Faster
+
+🎯: Group size can be multiplied to get quickly to the subnet of the targeted IP address
+
+🎯: Every group size lands on 128 at some point
+
+🎯: **Each group size aligns with the subnet value** in the **corresponding column** with each subsequent column **to the left**.
+
+🎯: Start higher, and subtract
+
+
+### Subnetting In /17 - /24 Range
+- **To get the CIDR notation of the 3rd octet**
+
+  💡: Start over from the **right side** and keep **decrementing**
+  
+  💡: **Total of IP Addresses = 2 ^ (32 - CIDR)**
+
+| 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
+------|-----|-----|-----|-----|-----|-----|-----|------------------
+| 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
+| /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+| /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 | **3rd Octet**  |
+
+#### Example:
+
+|  **Subnetting Attributes** |➡️ **of 10.4.235.99 /21:**            | ➡️ ** of 10.4.211.66 /18:** |
+-----------------------------|--------------------------------------|----------------------------  |
+**Network ID:** |   10.4.232.0 [3rd Octet => .224 => .232 => .240]  | 10.4.192.0 [3rd Octet : .128 => .192 => .0]  |
+**Broadcast IP:**| 10.4.239.255                                      | 10.4.255.255                                   |
+**First host:** |  10.4.232.1                                        |  10.4.192.1                                      |
+**Last host:** |  10.4.239.254                                       |  10.4.255.254                                    |
+**Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
+**# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11 = 2048]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
+**CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
+
+### Subnetting In /1 - /16 Range
 
 
 ## For More Information:
