@@ -140,6 +140,31 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 ### Subnetting In /1 - /16 Range
 
+- **To get the CIDR notation of the 3rd octet**
+
+  💡: Start over from the **right side** and keep **decrementing**
+  
+  💡: **Total of IP Addresses = 2 ^ (32 - CIDR)**
+
+| 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
+------|-----|-----|-----|-----|-----|-----|-----|------------------
+| 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
+| /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+| /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 | **3rd Octet**   |
+| /9 | /10  | /11 | /12 | /13 | /14 | /15 | /16 | **2nd Octet**   |
+| /1 | /2   | /3  | /4  | /5  | /6  | /7  | /8  | **1st Octet**   |
+
+#### Example:
+
+|  **Subnetting Attributes** |➡️ **of 10.50.111.222 /12:**            | ➡️ ** of :** |
+-----------------------------|--------------------------------------|----------------------------  |
+**Network ID:** |    []      |  []  |
+**Broadcast IP:**|                                      |                                  |
+**First host:** |                                       |                                      |
+**Last host:** |                                       |                                     |
+**Next Network:** |                                      |                                       |
+**# Total IP addresses:** |     []  |          []      |
+**CIDR/Subnet:** |                                      |   |
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
