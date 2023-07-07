@@ -79,10 +79,11 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 ### What Is Subnetting?
 
-⭐ **Subnetting means dividing a network into sub-networks.** :star:
+⭐ **Subnetting means dividing a network into sub-networks.**
 
+<div align="center">
 <img width="708" alt="Subnetting a network of 255 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting.png">
-
+</div>
 
 ➡️ **Subnetting Attributes:**
 - **Network ID:** The first IP address in the sub-network
@@ -104,11 +105,14 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 3️⃣: From /32, list CIDR notation  (right to left)
 
-
+<div align="center">
+  
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+
+</div>
 
 ### How To Find The 7 Attributes of a Given IP Address?
 1️⃣ : Use the given CIDR/Mask and find
@@ -118,7 +122,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - Increase by group size until you **PASS** target IP
 
 2️⃣ : get Net ID ➡️ Next Network ➡️ BC IP ➡️ First Host ➡️ Last Host ➡️ IP addresses (Group Size)
-
+  
 ![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting_Attribute.png)
 
 ### Tips For Solving The 7 Attributes Faster
@@ -142,14 +146,20 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   
   *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
+<div align="center">
+  
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
 | /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 | **3rd Octet**  |
 
+</div>
+
 #### Example:
 
+<div align="center">
+  
 |  **Subnetting Attributes** |➡️ **of 10.4.235.99 /21:**            | ➡️ ** of 10.4.211.66 /18:** |
 -----------------------------|--------------------------------------|----------------------------  |
 **Network ID:** |   10.4.232.0 [3rd Octet => .224 => .232]  | 10.4.192.0 [3rd Octet : .128 => .192 => .0]  |
@@ -159,6 +169,8 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
 **# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
 **CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
+
+</div>
 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -172,6 +184,8 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   
   *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
+<div align="center">
+
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
@@ -180,10 +194,14 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 | /9 | /10  | /11 | /12 | /13 | /14 | /15 | /16 | **2nd Octet**   |
 | /1 | /2   | /3  | /4  | /5  | /6  | /7  | /8  | **1st Octet**   |
 
+</div>
+
 💡: *0.0.0.0 /0 is commonly used in the routing table as the default route or default gateway*
 
 #### Example:
 
+<div align="center">
+  
 |  **Subnetting Attributes** |➡️ **of 10.50.111.222 /12:**   | ➡️ ** of 10.50.111.222 /7:** | ➡️ ** of 213.50.111.222 /2:**    |
 -----------------------------|-------------------------------|----------------------------  |---------------------------------|
 **Network ID:**              | 10.48.0.0 [.48 => .64 ]       | 10.0.0.0 [.8 => .10 => .12]  | 192.0.0.0 [.128 => .192 => .0]  |
@@ -194,8 +212,13 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **# Total IP addresses:**    | 1,048,576    [2 ^ (32-12)]    | 33,554,432  [2^(32-7)]       | 1,073,741,824                   |
 **CIDR/Subnet:**             | 255.240.0.0                   |  254.0.0.0                   | 192.0.0.0                       | 
 
+</div>
+
 *💡: **In reality most of the last /2 addresses are unassignable as host addresses***
-![Entire IPv4 addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png)
+
+<div align="center">
+<img alt="Entire IPv4 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png" width=70%>
+</div>
 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -204,7 +227,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 ## Network Devices
 ### How Data Flows Through The Internet
 #### Hosts :
-⭐ *Any system that sends or receives traffic.*
+⭐ *Any system that **sends or receives traffic**.*
   - phone
   - computer
   - laptop
@@ -216,11 +239,13 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 #### IP Addresses
 
-⭐ *IP Address is the identity of each host*
+⭐ *IP Address is the **identity of each host***
   - IPv4 is 32bit
   - Hierarchically assigned
 
-![IP addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/ip_addresses.png)
+<div align="center">
+<img alt="IP addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/ip_addresses.png" width=70%>
+</div>
 
 💡 : all of those hosts above exist in a network
 
@@ -241,12 +266,38 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 💡: A wire between two hosts is considered a network, the downside is that the signal **decays as it travels long distances**
 
-⭐: *A repeater simply repeats the signal that it receives*
+⭐: *A repeater simply **regenerate the signal that it receives***
   - it's very useful to connect two hosts in different buildings, so **the signal won't decay**
 
-![how a repeater work](https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png)
+<div align="center">
+<img alt="how a repeater work" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png" width=50%>
+</div>
 
 #### Hub
+⭐ *A hub is simply a **multi-port repeater***
+  - Facilitates adding another host
+💡 **Problem**: everyone receives everyone's else data
+
+<div align="center">
+<img alt="a hub connected to 4 hosts" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/hub.png" width=50%>
+</div>
+
+#### Bridge
+
+⭐ Bridges sits in between Hub-connected hosts
+  - Bridges only have two port
+  - Bridge learn which hosts are on each side
+
+#### Switch
+
+⭐ *Switches **facilitate communication** between hosts **within the same network***
+  - Switches are a **combination of Hubs and Bridges**
+    - **Multi ports**
+    - Learns **which hosts** are on **each port**
+
+#### Router
+
+
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
