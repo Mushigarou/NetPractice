@@ -14,17 +14,24 @@
   - [Tips For Solving The 7 Attributes Faster](https://github.com/Mushigarou/NetPractice/tree/main#tips-for-solving-the-7-attributes-faster)
   - [Subnetting In /17 - /24 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-17---24-range)
   - [Subnetting In /1 - /16 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-1---16-range)
-- [Network Devices]()
-  - [Hosts]()
-  - [Ip Addresses]()
-  - [Network]()
-  - [Repeater]()
-  - [Hub]()
-  - [Switch]()
-  - [Router]()
+- [Network Devices](https://github.com/Mushigarou/NetPractice/tree/main#Network-Devices)
+  - [How Data Flows Through The Internet](https://github.com/Mushigarou/NetPractice/tree/main#How-Data-Flows-Through-The-Internet)
+    - [Hosts](https://github.com/Mushigarou/NetPractice/tree/main#Hosts)
+    - [Ip Addresses](https://github.com/Mushigarou/NetPractice/tree/main#Ip-Addresses)
+    - [Network](https://github.com/Mushigarou/NetPractice/tree/main#Network)
+    - [Repeater](https://github.com/Mushigarou/NetPractice/tree/main#Repeater)
+    - [Hub](https://github.com/Mushigarou/NetPractice/tree/main#Hub)
+    - [Switch](https://github.com/Mushigarou/NetPractice/tree/main#Switch)
+    - [Router](https://github.com/Mushigarou/NetPractice/tree/main#Router)
+    - [Other Network Devices](https://github.com/Mushigarou/NetPractice/tree/main#Other-Network-Devices)
+- [OSI Model](https://github.com/Mushigarou/NetPractice/tree/main#)
+  - [Physical Layer - Transporting Bits]()
+  - [Data Link Layer - Hop to Hop]()
+  - [Network Layer - End to End]()
+    - [IP Addresses and MAC addresses](https://github.com/Mushigarou/NetPractice/tree/main#IP-Addresses-and-MAC-addresses)
 
 ## What Is TCP/IP?
-:star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
+⭐ ***The Transmission Control Protocol/Internet Protocol** is a **set of protocols** (communication standards) that describe how two or more computers can **communicate over a network**.*
 
 ## Terminology
 - **Datagrams:** A packet of data passed across a network
@@ -282,6 +289,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 #### Hub
 ⭐ *A hub is simply a **multi-port repeater***
   - Facilitates adding another host
+
 💡 **Problem**: everyone receives everyone's else data
 
 <div align="center">
@@ -321,6 +329,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 #### Router
 
 ⭐ *Routers facilitate **communication between networks***
+  - Provides a **traffic control point** (security, filtering, redirecting)
+    - In the past, Switches could not perform such filtering
+    - Routers are considered the logical separation of devices
   - Routers **learn which network they are attached to**
     - Known as **Routes** - Sorted in **Routing Table**
 
@@ -329,6 +340,62 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="center">
 <img alt="router connected to switches" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Router.png" width=70%>
 </div>
+
+⭐ ***Routing** is the process of moving data between networks*
+  - **Primary purpose** of a Router is *Routing*
+
+⭐ ***Switching** is the process of moving within networks*
+  - **Primary purpose** of a switch is *Switching*
+
+<div align="center">
+<img alt="Sending packets through the internet" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Internet_routers.png" width=50%>
+</div>
+
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Other Network Devices
+Any network device performs weather Routing and/or Switching
+- Access Points
+- Firewalls
+- Proxies
+- Virtual Routers
+- Layer 3 Switches
+
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+## OSI Model
+⭐ ***Networking Goal** is to allow two hosts to share data between them*
+
+### Physical Layer - Transporting Bits
+- Transporting bits by using an L1 technology
+
+### Data Link Layer - Hop to Hop
+- Interact with the wire (i.e., L1)
+  - **NIC** Network Interface Cards / Wi-Fi Access Cards
+- Addressing Scheme - **MAC addresses**
+  - **48 bits**, represented as **12 hex digits**
+  - 94-65-4c-3d-65-e5 (Windows) / 94\:65:4c\:3d\:65:e5 (Linux) / 9465.4c3d.65e5 (CISCO)
+
+💡 **Every NIC has a unique MAC address**
+
+💡 **ARP: Address Resolution Protocol Links a L3 address to a L2 address**
+
+### Network Layer - End to End
+- Addressing scheme - IP Addresses
+
+#### IP Addresses and MAC addresses
+💡 *Takeaway: **L2 and L3 work together** to move **data across the internet***
+
+<div align="center">
+<img alt="Sending packets using IP Addresses and MAC addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/l2_l3_OSI_model.png">
+</div>
+
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
 </div>
