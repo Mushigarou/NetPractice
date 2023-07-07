@@ -19,6 +19,9 @@
   - [Ip Addresses]()
   - [Network]()
   - [Repeater]()
+  - [Hub]()
+  - [Switch]()
+  - [Router]()
 
 ## What Is TCP/IP?
 :star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
@@ -272,6 +275,9 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="center">
 <img alt="how a repeater work" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png" width=50%>
 </div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 #### Hub
 ⭐ *A hub is simply a **multi-port repeater***
@@ -281,12 +287,22 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="center">
 <img alt="a hub connected to 4 hosts" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/hub.png" width=50%>
 </div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 #### Bridge
 
 ⭐ Bridges sits in between Hub-connected hosts
   - Bridges only have two port
   - Bridge learn which hosts are on each side
+
+<div align="center">
+<img alt="Bridge connected to two Hubs" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Bridge.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 #### Switch
 
@@ -295,9 +311,27 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
     - **Multi ports**
     - Learns **which hosts** are on **each port**
 
+<div align="center">
+<img alt="switch connects hosts within same network" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Switch.png" width=50%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
 #### Router
 
+⭐ *Routers facilitate **communication between networks***
+  - Routers **learn which network they are attached to**
+    - Known as **Routes** - Sorted in **Routing Table**
 
+💡 - **Routing Table** - all known networks for a Router
+
+<div align="center">
+<img alt="router connected to switches" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Router.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
