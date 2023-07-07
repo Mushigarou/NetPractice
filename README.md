@@ -378,7 +378,8 @@ Any network device performs weather Routing and/or Switching
 ### Data Link Layer - Hop to Hop
 - Interact with the wire (i.e., L1)
   - **NIC** Network Interface Cards / Wi-Fi Access Cards
-- Addressing Scheme - **MAC addresses**
+  - 🧮 Addressing Scheme - **MAC addresses**
+
   - **48 bits**, represented as **12 hex digits**
   - 94-65-4c-3d-65-e5 (Windows) / 94\:65:4c\:3d\:65:e5 (Linux) / 9465.4c3d.65e5 (CISCO)
 
@@ -387,7 +388,7 @@ Any network device performs weather Routing and/or Switching
 💡 **ARP: Address Resolution Protocol Links a L3 address to a L2 address**
 
 ### Network Layer - End to End
-- Addressing scheme - IP Addresses
+- 🧮 Addressing scheme - **IP Addresses**
 
 #### IP Addresses and MAC addresses
 💡 *Takeaway: **L2 and L3 work together** to move **data across the internet***
@@ -399,6 +400,15 @@ Any network device performs weather Routing and/or Switching
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
 </div>
+
+### Transport Layer - Service to Service
+
+⭐ ***Distinguish data streams**. This layer ensures that data is received by the right process in your host (multiple tabs in browser)*
+  - 🧮 Addressing Scheme - **Ports**
+    - [0 - 65535] -- TCP -- **favors reliability**
+    - [0 - 65535] -- TCP -- **favors efficiency**
+  - **Servers listen** for requests to **predefined Ports**
+  - Clients **select a random** Port for **each connection**
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
