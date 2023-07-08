@@ -29,6 +29,7 @@
   - [Data Link Layer - Hop to Hop]()
   - [Network Layer - End to End]()
     - [IP Addresses and MAC addresses](https://github.com/Mushigarou/NetPractice/tree/main#IP-Addresses-and-MAC-addresses)
+  - [Overview of OSI Model]()
 
 ## What Is TCP/IP?
 ⭐ ***The Transmission Control Protocol/Internet Protocol** is a **set of protocols** (communication standards) that describe how two or more computers can **communicate over a network**.*
@@ -280,7 +281,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - it's very useful to connect two hosts in different buildings, so **the signal won't decay**
 
 <div align="center">
-<img alt="how a repeater work" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png" width=50%>
+<img alt="how a repeater work" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png" width=70%>
 </div>
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -293,7 +294,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 💡 **Problem**: everyone receives everyone's else data
 
 <div align="center">
-<img alt="a hub connected to 4 hosts" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/hub.png" width=50%>
+<img alt="a hub connected to 4 hosts" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/hub.png" width=70%>
 </div>
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -320,7 +321,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
     - Learns **which hosts** are on **each port**
 
 <div align="center">
-<img alt="switch connects hosts within same network" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Switch.png" width=50%>
+<img alt="switch connects hosts within same network" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Switch.png" width=70%>
 </div>
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -348,7 +349,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - **Primary purpose** of a switch is *Switching*
 
 <div align="center">
-<img alt="Sending packets through the internet" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Internet_routers.png" width=50%>
+<img alt="Sending packets through the internet" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Internet_routers.png" width=70%>
 </div>
 
 </div>
@@ -409,6 +410,30 @@ Any network device performs weather Routing and/or Switching
     - [0 - 65535] -- TCP -- **favors efficiency**
   - **Servers listen** for requests to **predefined Ports**
   - Clients **select a random** Port for **each connection**
+
+![transport layer in networking](https://github.com/Mushigarou/NetPractice/blob/main/Images/Transport%20Layer.png)
+
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+### Overview of OSI Model
+
+<div align="center">
+<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/OSI_model.png">
+</div>
+
+⭐ *Takeaway:* **Network Devices and Protocol operation on specific layers, but these are not strict rules [Exceptions: routers, ARP...]. *It is just a model***
+
+<div align="center">
+<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/overview_osi.png">
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+## How Hosts Speak On Internet
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
