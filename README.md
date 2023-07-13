@@ -31,6 +31,7 @@
     - [IP Addresses and MAC addresses](https://github.com/Mushigarou/NetPractice/tree/main#IP-Addresses-and-MAC-addresses)
   - [Overview of OSI Model]()
 
+
 ## What Is TCP/IP?
 ⭐ ***The Transmission Control Protocol/Internet Protocol** is a **set of protocols** (communication standards) that describe how two or more computers can **communicate over a network**.*
 
@@ -230,6 +231,35 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="center">
 <img alt="Entire IPv4 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png" width=70%>
 </div>
+
+## Network Devices
+### How Data Flows Through The Internet
+#### Hosts :
+⭐ *Any system that sends or receives traffic.*
+  - phone
+  - computer
+  - laptop
+  - servers
+  - cloud servers
+  - Internet of Things (IoT) (speaker, refrigerator...)
+
+⭐ **Client:** initiates request. **Servers** respond. (Relative to specific communication)
+
+#### IP Addresses :
+
+⭐ *IP Address is the identity of each host*
+  - IPv4 is 32bit
+  - Hierarchically assigned
+
+![IP addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/ip_addresses.png)
+
+💡 : all of those hosts above exist in a network
+
+#### Network :
+⭐ Network is what **transports traffic between hosts**
+  - Logical grouping of hosts which require similar connectivity
+  - Subnetworks, subnet
+  - 💡 Networks connect to other networks (The Internet is simply an inter-connected network)
 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
