@@ -14,10 +14,26 @@
   - [Tips For Solving The 7 Attributes Faster](https://github.com/Mushigarou/NetPractice/tree/main#tips-for-solving-the-7-attributes-faster)
   - [Subnetting In /17 - /24 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-17---24-range)
   - [Subnetting In /1 - /16 Range](https://github.com/Mushigarou/NetPractice/tree/main#subnetting-in-1---16-range)
-- [Network Devices]()
+- [Network Devices](https://github.com/Mushigarou/NetPractice/tree/main#Network-Devices)
+  - [How Data Flows Through The Internet](https://github.com/Mushigarou/NetPractice/tree/main#How-Data-Flows-Through-The-Internet)
+    - [Hosts](https://github.com/Mushigarou/NetPractice/tree/main#Hosts)
+    - [Ip Addresses](https://github.com/Mushigarou/NetPractice/tree/main#Ip-Addresses)
+    - [Network](https://github.com/Mushigarou/NetPractice/tree/main#Network)
+    - [Repeater](https://github.com/Mushigarou/NetPractice/tree/main#Repeater)
+    - [Hub](https://github.com/Mushigarou/NetPractice/tree/main#Hub)
+    - [Switch](https://github.com/Mushigarou/NetPractice/tree/main#Switch)
+    - [Router](https://github.com/Mushigarou/NetPractice/tree/main#Router)
+    - [Other Network Devices](https://github.com/Mushigarou/NetPractice/tree/main#Other-Network-Devices)
+- [OSI Model](https://github.com/Mushigarou/NetPractice/tree/main#)
+  - [Physical Layer - Transporting Bits]()
+  - [Data Link Layer - Hop to Hop]()
+  - [Network Layer - End to End]()
+    - [IP Addresses and MAC addresses](https://github.com/Mushigarou/NetPractice/tree/main#IP-Addresses-and-MAC-addresses)
+  - [Overview of OSI Model]()
+
 
 ## What Is TCP/IP?
-:star: The Transmission Control Protocol/Internet Protocol is a set of protocols (communication standards) that describe how two or more computers can communicate over a network.
+⭐ ***The Transmission Control Protocol/Internet Protocol** is a **set of protocols** (communication standards) that describe how two or more computers can **communicate over a network**.*
 
 ## Terminology
 - **Datagrams:** A packet of data passed across a network
@@ -75,10 +91,11 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 ### What Is Subnetting?
 
-⭐ **Subnetting means dividing a network into sub-networks.** :star:
+⭐ **Subnetting means dividing a network into sub-networks.**
 
+<div align="center">
 <img width="708" alt="Subnetting a network of 255 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting.png">
-
+</div>
 
 ➡️ **Subnetting Attributes:**
 - **Network ID:** The first IP address in the sub-network
@@ -100,11 +117,14 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 
 3️⃣: From /32, list CIDR notation  (right to left)
 
-
+<div align="center">
+  
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
+
+</div>
 
 ### How To Find The 7 Attributes of a Given IP Address?
 1️⃣ : Use the given CIDR/Mask and find
@@ -114,7 +134,7 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   - Increase by group size until you **PASS** target IP
 
 2️⃣ : get Net ID ➡️ Next Network ➡️ BC IP ➡️ First Host ➡️ Last Host ➡️ IP addresses (Group Size)
-
+  
 ![Solving subnetting for a target IP](https://github.com/Mushigarou/NetPractice/blob/main/Images/Subnetting_Attribute.png)
 
 ### Tips For Solving The 7 Attributes Faster
@@ -138,14 +158,20 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   
   *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
+<div align="center">
+  
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
 | /25 | /26 | /27 | /28 | /29 | /30 | /31 | /32 | **CIDR**        |
 | /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24 | **3rd Octet**  |
 
+</div>
+
 #### Example:
 
+<div align="center">
+  
 |  **Subnetting Attributes** |➡️ **of 10.4.235.99 /21:**            | ➡️ ** of 10.4.211.66 /18:** |
 -----------------------------|--------------------------------------|----------------------------  |
 **Network ID:** |   10.4.232.0 [3rd Octet => .224 => .232]  | 10.4.192.0 [3rd Octet : .128 => .192 => .0]  |
@@ -155,6 +181,8 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **Next Network:** | 10.4.240.0                                       |  10.5.0.0                                     |
 **# Total IP addresses:** | 2048     [32 - 21 = 11 & 2 ^ 11]  |   16,384         [32-18 = 14 & 2 ^ 14 = ]      |
 **CIDR/Subnet:** |   255.255.248.0                                   |  255.255.192.0  |
+
+</div>
 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -168,6 +196,8 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
   
   *💡: **Total of IP Addresses = 2 ^ (32 - CIDR)***
 
+<div align="center">
+
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   | **Groupe Size** |
 ------|-----|-----|-----|-----|-----|-----|-----|------------------
 | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255 | **Subnet**      |
@@ -176,10 +206,14 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 | /9 | /10  | /11 | /12 | /13 | /14 | /15 | /16 | **2nd Octet**   |
 | /1 | /2   | /3  | /4  | /5  | /6  | /7  | /8  | **1st Octet**   |
 
+</div>
+
 💡: *0.0.0.0 /0 is commonly used in the routing table as the default route or default gateway*
 
 #### Example:
 
+<div align="center">
+  
 |  **Subnetting Attributes** |➡️ **of 10.50.111.222 /12:**   | ➡️ ** of 10.50.111.222 /7:** | ➡️ ** of 213.50.111.222 /2:**    |
 -----------------------------|-------------------------------|----------------------------  |---------------------------------|
 **Network ID:**              | 10.48.0.0 [.48 => .64 ]       | 10.0.0.0 [.8 => .10 => .12]  | 192.0.0.0 [.128 => .192 => .0]  |
@@ -190,8 +224,13 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 **# Total IP addresses:**    | 1,048,576    [2 ^ (32-12)]    | 33,554,432  [2^(32-7)]       | 1,073,741,824                   |
 **CIDR/Subnet:**             | 255.240.0.0                   |  254.0.0.0                   | 192.0.0.0                       | 
 
+</div>
+
 *💡: **In reality most of the last /2 addresses are unassignable as host addresses***
-![Entire IPv4 addresses](https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png)
+
+<div align="center">
+<img alt="Entire IPv4 addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Entire_IPv4.png" width=70%>
+</div>
 
 ## Network Devices
 ### How Data Flows Through The Internet
@@ -225,6 +264,206 @@ Link + Physical layer   | Defines the networking methods (protocols) within the 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
 </div>
+
+## Network Devices
+### How Data Flows Through The Internet
+#### Hosts :
+⭐ *Any system that **sends or receives traffic**.*
+  - phone
+  - computer
+  - laptop
+  - servers
+  - cloud servers
+  - Internet of Things (IoT) (speaker, refrigerator...)
+
+⭐ **Client:** initiates request. **Servers** respond. (Relative to specific communication)
+
+#### IP Addresses
+
+⭐ *IP Address is the **identity of each host***
+  - IPv4 is 32bit
+  - Hierarchically assigned
+
+<div align="center">
+<img alt="IP addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/ip_addresses.png" width=70%>
+</div>
+
+💡 : all of those hosts above exist in a network
+
+#### Network
+
+💡: Before networks exist, if you want to upload some files from another host you had to use a drive, USB...
+
+⭐ *Network is what **transports traffic between hosts***
+  - Logical grouping of hosts which require similar connectivity
+  - Subnetworks, subnet
+  - 💡 Networks connect to other networks (The Internet is simply an inter-connected network)
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Repeater
+
+💡: A wire between two hosts is considered a network, the downside is that the signal **decays as it travels long distances**
+
+⭐: *A repeater simply **regenerate the signal that it receives***
+  - it's very useful to connect two hosts in different buildings, so **the signal won't decay**
+
+<div align="center">
+<img alt="how a repeater work" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Repeater.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Hub
+⭐ *A hub is simply a **multi-port repeater***
+  - Facilitates adding another host
+
+💡 **Problem**: everyone receives everyone's else data
+
+<div align="center">
+<img alt="a hub connected to 4 hosts" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/hub.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Bridge
+
+⭐ Bridges sits in between Hub-connected hosts
+  - Bridges only have two port
+  - Bridge learn which hosts are on each side
+
+<div align="center">
+<img alt="Bridge connected to two Hubs" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Bridge.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Switch
+
+⭐ *Switches **facilitate communication** between hosts **within the same network***
+  - Switches are a **combination of Hubs and Bridges**
+    - **Multi ports**
+    - Learns **which hosts** are on **each port**
+
+<div align="center">
+<img alt="switch connects hosts within same network" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Switch.png" width=70%>
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Router
+
+⭐ *Routers facilitate **communication between networks***
+  - Provides a **traffic control point** (security, filtering, redirecting)
+    - In the past, Switches could not perform such filtering
+    - Routers are considered the logical separation of devices
+  - Routers **learn which network they are attached to**
+    - Known as **Routes** - Sorted in **Routing Table**
+
+💡 - **Routing Table** - all known networks for a Router
+
+<div align="center">
+<img alt="router connected to switches" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Router.png" width=70%>
+</div>
+
+⭐ ***Routing** is the process of moving data between networks*
+  - **Primary purpose** of a Router is *Routing*
+
+⭐ ***Switching** is the process of moving within networks*
+  - **Primary purpose** of a switch is *Switching*
+
+<div align="center">
+<img alt="Sending packets through the internet" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/Internet_routers.png" width=70%>
+</div>
+
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+#### Other Network Devices
+Any network device performs weather Routing and/or Switching
+- Access Points
+- Firewalls
+- Proxies
+- Virtual Routers
+- Layer 3 Switches
+
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+## OSI Model
+⭐ ***Networking Goal** is to allow two hosts to share data between them*
+
+### Physical Layer - Transporting Bits
+- Transporting bits by using an L1 technology
+
+### Data Link Layer - Hop to Hop
+- Interact with the wire (i.e., L1)
+  - **NIC** Network Interface Cards / Wi-Fi Access Cards
+  - 🧮 Addressing Scheme - **MAC addresses**
+
+  - **48 bits**, represented as **12 hex digits**
+  - 94-65-4c-3d-65-e5 (Windows) / 94\:65:4c\:3d\:65:e5 (Linux) / 9465.4c3d.65e5 (CISCO)
+
+💡 **Every NIC has a unique MAC address**
+
+💡 **ARP: Address Resolution Protocol Links a L3 address to a L2 address**
+
+### Network Layer - End to End
+- 🧮 Addressing scheme - **IP Addresses**
+
+#### IP Addresses and MAC addresses
+💡 *Takeaway: **L2 and L3 work together** to move **data across the internet***
+
+<div align="center">
+<img alt="Sending packets using IP Addresses and MAC addresses" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/l2_l3_OSI_model.png">
+</div>
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+### Transport Layer - Service to Service
+
+⭐ ***Distinguish data streams**. This layer ensures that data is received by the right process in your host (multiple tabs in browser)*
+  - 🧮 Addressing Scheme - **Ports**
+    - [0 - 65535] -- TCP -- **favors reliability**
+    - [0 - 65535] -- TCP -- **favors efficiency**
+  - **Servers listen** for requests to **predefined Ports**
+  - Clients **select a random** Port for **each connection**
+
+![transport layer in networking](https://github.com/Mushigarou/NetPractice/blob/main/Images/Transport%20Layer.png)
+
+
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+### Overview of OSI Model
+
+<div align="center">
+<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/OSI_model.png">
+</div>
+
+⭐ *Takeaway:* **Network Devices and Protocol operation on specific layers, but these are not strict rules [Exceptions: routers, ARP...]. *It is just a model***
+
+<div align="center">
+<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/overview_osi.png">
+</div>
+<div align="right">
+  <b><a href="#top">↥ back to top</a></b>
+</div>
+
+## How Hosts Speak On Internet
 
 ## For More Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
