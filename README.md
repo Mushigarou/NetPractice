@@ -96,6 +96,10 @@ Link + Physical layer   | Mac Address, Fiber, Wireless, Ethernet Cables... |
 ## OSI Model
 ⭐ ***Networking Goal** is to allow two hosts to share data between them*
 
+<div align="center">
+<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/OSI_model.png">
+</div>
+
 ### Physical Layer - Transporting Bits
 - Transporting bits by using an L1 technology
 
@@ -127,7 +131,7 @@ Link + Physical layer   | Mac Address, Fiber, Wireless, Ethernet Cables... |
 
 ### Transport Layer - Service to Service
 
-⭐ ***Distinguish data streams**. This layer ensures that data is received by the right process in your host (multiple tabs in browser)*
+⭐ ***Distinguish data streams**. This layer ensures that data is received by the right process in your host (multiple tabs in the browser)*
   - 🧮 Addressing Scheme - **Ports**
     - [0 - 65535] -- TCP -- **favors reliability**
   - **Servers listen** for requests to **predefined Ports**
@@ -143,14 +147,10 @@ Link + Physical layer   | Mac Address, Fiber, Wireless, Ethernet Cables... |
 ### Overview of OSI Model
 
 <div align="center">
-<img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/OSI_model.png">
-</div>
-
-<div align="center">
 <img alt="OSI model with explanation" src="https://github.com/Mushigarou/NetPractice/blob/main/Images/overview_osi.png">
 </div>
 
-⭐ *Takeaway:* **Network Devices and Protocol operation on specific layers, but these are not strict rules [Exceptions: routers, ARP...]. *It is just a model***
+⭐ *Takeaway:* **Network Devices and Protocols operate on specific layers, but these are not strict rules [Exceptions: routers, Address Resotluion Protocol (ARP)...]. *It is just a model***
 
 <div align="right">
   <b><a href="#top">↥ back to top</a></b>
@@ -180,11 +180,11 @@ Link + Physical layer   | Mac Address, Fiber, Wireless, Ethernet Cables... |
 </div>
 
 ### How To Write A CheatSheet?
-1️⃣ row: Start with 1, double until you reach 128 (right to left)
+**Row** 1️⃣: Start with 1, double until you reach 128 (right to left)
 
-2️⃣ row: Subtract the top row from 256 (256-1 = 255 ...)
+**Row** 2️⃣: Subtract the top row from 256 (256-1 = 255 ...)
 
-3️⃣ row: From /32, list CIDR notation (decrement by 1 from right to left)
+**Row** 3️⃣: From /32, list CIDR notation (decrement by 1 from right to left)
 
 <div align="center">
   
