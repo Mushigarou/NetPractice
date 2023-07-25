@@ -1,4 +1,5 @@
 # NetPractice
+![Licence](https://img.shields.io/badge/License-MIT-blue.svg)
 
 <div id="top"></div>
 
